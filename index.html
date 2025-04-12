@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/4f5f087331.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div class="card1" id="sec1">
+        <h3>Liste des contacts</h3>
+        <div class="search">
+            <input type="text" name="search" id="searchBar" placeholder="Search">
+            <i class="fa-solid fa-magnifying-glass" onclick="searchContact()"></i>
+        </div>
+        <button class="ajouter" onclick="goToSec3()">Nouveau Contact</button>
+        <div class="cardItem" id="cardItem">
+        </div>
+    </div>
+
+    <div class="card2" id="sec2">
+        <h3>Contact Infos</h3>
+        <button class="backArrow" onclick="goToSec1()"><i class="fa-solid fa-arrow-left"></i></button>
+        <div class="contactInfos" id="contactInfos">
+            <i class="fa-solid fa-user"></i>
+            <p id="date"></p>
+            <p id="contactNom"></p>
+            <p id="contactNum"></p>
+            <button><i class="fa-solid fa-phone telIMG"></i></button>
+        </div>
+    </div>
+
+    <div class="card3" id="sec3">
+        <h3>Nouveau Contact</h3>
+
+        <button class="backArrow" onclick="goToSec1()"><i class="fa-solid fa-arrow-left"></i></button>
+
+        <div class="nameInp">
+            <i class="fa-solid fa-user"></i>
+            <input type="text" id="nom" placeholder="Nom de contact">
+        </div>
+
+        <div class="numberInp">
+            <i class="fa-solid fa-phone"></i>
+            <input type="tel" id="tel" placeholder="Numero telephone" maxlength="10" minlength="10">
+        </div>
+
+        <button class="addButton" onclick="addContact()">Ajouter</button>
+    </div>
+    <script src="./index.js"></script>
+</body>
+</html>
